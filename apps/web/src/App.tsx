@@ -1,7 +1,7 @@
+import { UserRoleSchema, type CreateUser, type UserResponse } from '@repo/schemas';
 import { useEffect, useState, type SubmitEvent } from 'react';
 
 import './App.css';
-import { UserRoleSchema, type CreateUser, type UserResponse } from './types/User';
 
 const API_URL = 'http://localhost:3000';
 

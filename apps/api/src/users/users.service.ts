@@ -1,10 +1,12 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
+import { User } from '@repo/schemas';
 import { randomUUID } from 'crypto';
 
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { User } from './entities/user.entity';
-import { UserRole } from './enums/user-role.enum';
+
+// import { User } from './entities/user.entity';
+// import { UserRole } from './enums/user-role.enum';
 
 @Injectable()
 export class UsersService {
@@ -14,7 +16,7 @@ export class UsersService {
       name: 'Alice Johnson',
       email: 'alice@example.com',
       age: 30,
-      role: UserRole.ADMIN,
+      role: 'admin',
       createdAt: new Date('2024-01-15').toISOString(),
     },
     {
@@ -22,7 +24,7 @@ export class UsersService {
       name: 'Bob Smith',
       email: 'bob@example.com',
       age: 25,
-      role: UserRole.USER,
+      role: 'user',
       createdAt: new Date('2024-02-20').toISOString(),
     },
   ];
